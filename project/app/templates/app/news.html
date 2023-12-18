@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All news</title>
+</head>
+<body>
+    <h3>Последние новости:</h3>
+    {% for post in news %}
+    <div>   
+        <p>Название: {{ post.title }}</p>
+        <p>Описание: {{ post.content }} </p>
+        <p>Категория: {{ post.category }}
+    </div><br><br>
+    {% endfor %}
+</body>
+</html>

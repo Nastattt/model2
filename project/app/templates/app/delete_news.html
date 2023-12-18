@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete News</title>
+</head>
+<body>
+    <h1>Delete News</h1>
+    <form method="post" action="{% url 'delete_news' news_id=news.id %}">
+        {% csrf_token %}
+        <button type="submit"> delete it</button>
+    </form>
+    <a href="{% url 'news_list' %}">Cancel</a>
+</body>
+</html>
